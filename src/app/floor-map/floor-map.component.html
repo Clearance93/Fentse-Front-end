@@ -1,0 +1,25 @@
+<div>
+    <h1>Floor Map {{map.floorNumber}}</h1>
+    <img src="{{map.floor_image}}" alt="Floor Map Image">
+    <h2>Coordinates:</h2>
+    <ul>
+      <li *ngFor="let coord of map.coordinates">
+        {{coord.name}}: ({{coord.latitute}}, {{coord.longitute}})
+      </li>
+    </ul>
+    <h2>Shops:</h2>
+    <ul>
+      <li *ngFor="let shop of map.shops">
+        {{shop.shop_name}} ({{shop.distance}}m away)
+        <br>
+        <img src="{{shop.shop_image}}" alt="Shop Image">
+      </li>
+    </ul>
+  </div>
+
+
+
+  <div *ngIf="map">
+    {{map.shops[0].shop_name}}
+  </div>
+  

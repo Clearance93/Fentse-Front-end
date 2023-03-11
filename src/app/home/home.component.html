@@ -1,0 +1,35 @@
+<<<<<<< HEAD
+<div class="container">
+    <div class="raw">
+        <h1>Indoor mapping system</h1>
+         <div class="items">
+            <div class="row">
+              <div class="col-md-3" *ngFor="let mm of locat">
+                <div class="container">
+                    <!-- {{mm._id}} -->
+                    <img src="{{mm.Images}}" class="img">
+                    <h5>{{mm.Retailer}}</h5>
+                </div>
+                <!-- <h5 style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 20ch;">{{mm.Retailer}}</h5>
+                <p>R{{mm.image}}</p>
+                <h6>{{mm.createdAt}}</h6> -->
+              </div>
+            </div>
+          </div>
+    </div>
+</div>
+=======
+
+<h1>South East Shopping Mall</h1>
+<button class="btn btn-secondary" [routerLink]="['/floor-add']">Add Floor</button>
+<div class="items">
+    <div class="row">
+        <div class="col-md-3 " *ngFor="let pro of map">
+            <h3>Floor No: {{pro.floorNumber}}</h3>
+            <img class="img" [routerLink]="['/floor-map', pro._id]" src="{{pro.floor_image}}" alt="">
+        </div>
+    </div>
+</div>
+
+
+>>>>>>> ede5cc6 (Front-End)

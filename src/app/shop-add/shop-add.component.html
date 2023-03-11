@@ -1,0 +1,45 @@
+
+<div class="container">
+  <div class="card-header">
+      <h3>Add a shop</h3>
+  </div>
+  <div class="card-body">
+      <div class="p-5 mb-4 rounded-3">
+          <div class="container-fluid py-5">
+            <form class="form">
+              <div class="mb-3">
+                  <label for="latitute" class="form-label">Latitute</label>
+                  <input type="number" class="form-control" id="latitute" name="latitute" [(ngModel)]="map.coordinates[0].latitute" placeholder="">
+              </div>
+              <div class="mb-3">
+                  <label for="longitute" class="form-label">Longitute</label>
+                  <input type="number" class="form-control" id="longitute" name="longitute" [(ngModel)]="map.coordinates[0].longitute" placeholder="">
+              </div>
+              <div class="mb-3">
+                  <label for="shop_image" class="form-label">Shop Name</label>
+                  <input type="text" class="form-control" id="shop_name" name="shop_name" [(ngModel)]="map.shops[0].shop_name">
+              </div>
+              <div class="mb-3">
+                  <label for="shop_image" class="form-label">Shop Image</label>
+                  <input type="text" class="form-control" id="shop_image" name="shop_image" [(ngModel)]="map.shops[0].shop_image">
+              </div>
+              <div class="mb-3">
+                  <label for="distance" class="form-label">Distance</label>
+                  <input type="number" class="form-control" id="distace" name="distance" [(ngModel)]="map.shops[0].distance" >
+              </div>
+              <div class="mb-3">
+                  <label for="from" class="form-label">From:</label>
+                  <input type="from" class="form-control" id="from" name="from" [(ngModel)]="map.shops[0].from">
+              </div>
+              <div class="mb-3">
+                  <label for="to" class="form-label">To:</label>
+                  <input type="to" class="form-control" id="to" name="to" [(ngModel)]="map.shops[0].to">
+              </div>
+            </form>
+            <button type="submit" class="btn btn-warning" (click)="submit()">Submit</button> &nbsp;
+            <button routerLink="/login" class="btn btn-danger">Back</button>
+          </div>
+        </div>
+      
+  </div>
+</div>

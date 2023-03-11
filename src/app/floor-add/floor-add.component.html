@@ -1,0 +1,23 @@
+
+
+<main class="form-signin">
+    <form>
+      <div class="form-floating">
+        <input type="number" class="form-control" id="email" name="email" [(ngModel)]="floorNumber" [ngModelOptions]="{standalone: true}">
+        <label for="floatingInput">Floor Number</label>
+      </div>
+      <div class="form-floating">
+        <input type="text" class="form-control" id="password" name="password" [(ngModel)]="floor_image" [ngModelOptions]="{standalone: true}">
+        <label for="floatingPassword">Image</label>
+      </div>
+  
+      <div class="checkbox mb-3">
+        <label>
+          <input type="checkbox" value="remember-me"> Remember me
+        </label>
+      </div>
+      <button class="btn btn-lg btn-outline-primary" type="submit" (click)="submit()">Submit</button>
+    </form>
+
+    <button class="btn btn-danger" [routerLink]="['/home']">Back</button>
+  </main>
